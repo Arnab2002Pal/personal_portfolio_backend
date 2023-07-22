@@ -17,14 +17,3 @@ import { userRouter } from "./routes/User.js"
 
 
 app.use("/api/v1", userRouter)
-
-// Use path.join() to resolve the correct path for frontend build files
-const frontendBuildPath = path.join(__dirname, "../frontend/build");
-
-// Serve static files from the frontend's build directory
-app.use(express.static(frontendBuildPath));
-
-// Send the index.html file for all other routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(frontendBuildPath, "index.html"));
-});
