@@ -5,7 +5,7 @@ import cors from "cors"
 export const app = express()
 
 app.use(cors({
-    origin: "https://my-portfolio-xb6b.onrender.com",
+    origin: "https://portfolio-backend-k8o9.onrender.com",
     credentials: true, // Set this to true if you need to pass cookies or other credentials
   }));
 
