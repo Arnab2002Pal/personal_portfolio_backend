@@ -4,10 +4,7 @@ import path  from "path"
 import cors from "cors"
 export const app = express()
 
-app.use(cors({
-    origin: "https://portfolio-backend-k8o9.onrender.com",
-    credentials: true, // Set this to true if you need to pass cookies or other credentials
-  }));
+app.use(cors());
 
 app.use(express.json({
     limit: "50mb"
